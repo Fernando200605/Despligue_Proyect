@@ -29,9 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-"""CSRF_TRUSTED_ORIGINS = [
-    'https://proyectocolegio-1.onrender.com',
-]"""
+CSRF_TRUSTED_ORIGINS = [
+    'https://despligue-proyect.onrender.com',
+]
 # Application definition
 
 INSTALLED_APPS = [
