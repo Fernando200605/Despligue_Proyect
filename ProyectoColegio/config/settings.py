@@ -25,7 +25,7 @@ load_dotenv(BASE_DIR / '.env')
 SECRET_KEY = "django-insecure-c7n#@=6h(q!%z^g&9x+@l$z!@#%^&*()_+-=[]{}|;:',.<>?/~`"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,8 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
@@ -133,8 +136,6 @@ LOGIN_REDIRECT_URL = 'app:index_curso'
 LOGOUT_REDIRECT_URL = 'login:login' 
 LOGIN_URL = 'login:login'   
 LOGOUT_URL = 'login:logout'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
